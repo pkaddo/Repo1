@@ -1,16 +1,22 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimpleCalc.CS.PortableLibrary;
-
-namespace SimpleCalc.CS.UnitTests
+﻿namespace SimpleCalc.CS.UnitTests
 {
+  using Microsoft.VisualStudio.TestTools.UnitTesting;
+  using SimpleCalc.CS.PortableLibrary;
+
   [TestClass]
   public class CalculatorTests
   {
+    private Calculator calc;
+
+    [TestInitialize]
+    public void init()
+    {
+      calc = new Calculator();
+    }
+
     [TestMethod]
     public void TestCsAddition()
     {
-      Calculator calc = new Calculator();
       calc.Number1 = 10;
       calc.Number2 = 10;
       double answer = calc.Add();
@@ -21,7 +27,6 @@ namespace SimpleCalc.CS.UnitTests
     [TestMethod]
     public void TestCsSubtraction()
     {
-      Calculator calc = new Calculator();
       calc.Number1 = 10;
       calc.Number2 = 10;
       double answer = calc.Subtract();
@@ -32,7 +37,6 @@ namespace SimpleCalc.CS.UnitTests
     [TestMethod]
     public void TestCsMultiplication()
     {
-      Calculator calc = new Calculator();
       calc.Number1 = 10;
       calc.Number2 = 10;
       double answer = calc.Multiply();
@@ -43,13 +47,11 @@ namespace SimpleCalc.CS.UnitTests
     [TestMethod]
     public void TestCsDivision()
     {
-      Calculator calc = new Calculator();
       calc.Number1 = 10;
       calc.Number2 = 10;
       double answer = calc.Divide();
       //Ensure that 10/10=1
       Assert.AreEqual(answer, 1d);
     }
-
   }
 }
