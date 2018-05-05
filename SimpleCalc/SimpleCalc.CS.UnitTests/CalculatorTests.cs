@@ -20,12 +20,12 @@
       calc.Number1 = 10;
       calc.Number2 = 10;
       double answer = calc.Add();
-      ////Ensure that 10+10=20
+      //Ensure that 10+10=20
       Assert.AreEqual(answer, 20d);
     }
 
     [TestMethod]
-    public void TestCsSubtraction_ChangingJustToTestVcsLabelling()
+    public void TestCsSubtraction()
     {
       calc.Number1 = 10;
       calc.Number2 = 10;
