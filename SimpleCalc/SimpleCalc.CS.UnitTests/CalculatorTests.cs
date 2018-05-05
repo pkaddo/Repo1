@@ -25,7 +25,7 @@
     }
 
     [TestMethod]
-    public void TestCsSubtraction()
+    public void TestCsSubtraction_ChangingJustToTestVcsLabelling()
     {
       calc.Number1 = 10;
       calc.Number2 = 10;
