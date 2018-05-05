@@ -30,7 +30,7 @@
       calc.Number1 = 10;
       calc.Number2 = 10;
       double answer = calc.Subtract();
-      //Ensure that 10-10=0
+      ///Ensure that 10-10=0
       Assert.AreEqual(answer, 0d);
     }
 
